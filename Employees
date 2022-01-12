@@ -1,0 +1,8 @@
+CREATE TABLE EMPLOYEES
+(
+id int,
+name varchar(25), 
+Salary varchhar(10), 
+Department varchar(10)
+);
+

@@ -29,11 +29,11 @@ def execute_query(connection, query):
 connection = create_server_connection("localhost", "root", "slqalchemy@mysql", "organization")
 
 # SQLAlchemy1 : where 
-sql1 = db.select([employees]).where(employees.columns.basicsalary < 25000) 
+sql1 = db.select([employees]).where(employees.columns.salary < 25000) 
 print(execute_query(connection, sql1))
 
 # SQLAlchemy : in
-sql2 = db.select([employees]).where(employees.columns.basicsalary.in_([20000, 30000]))
+sql2 = db.select([employees]).where(employees.columns.salary.in_([20000, 30000]))
 print(execute_query(connection, sql2))
 
 # SQLAlchemy : order by
